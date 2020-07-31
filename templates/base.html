@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base Title Test</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    {% block content%}
+        replace me
+    {% endblock %}
+
+    {% block 2 %}
+        different block means different content
+    {% endblock 2 %}
+</body>
+</html>

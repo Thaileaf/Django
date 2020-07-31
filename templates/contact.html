@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title is this</title>
+    <h1>You're on my webpage</h1>
+    <h3>{{ title|capfirst|upper}}</h3>
+    <h4>{{ title2|center:'100' }}</h4>
+</head>
+<body>
+What do you want huh
+{{ my_html|safe}}
+{{ my_html|slugify }}
+<p>
+    {{ my_text }}, {{ my_number }} {{ my_list }}
+</p>
+<ul>
+{% for my_sub_item in my_list %}
+    {% if my_sub_item == 123 %}
+        <li>{{ forloop.counter }} - {{ my_sub_item|add:22 }}</li>
+    {% elif my_sub_item == 'abc' %}
+        <li>This is not the network</li>
+    {% else %}
+        <li>{{ forloop.counter }} - {{ my_sub_item }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+</body>
+</html>
