@@ -1,0 +1,9 @@
+base html template-
+navbar html template-
+making app-
+making model-
+making urls-
+making templates and views-
+model form-
+validation of forms (clean)-
+creating model-

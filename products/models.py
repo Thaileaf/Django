@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 
 # Create your models here.
 class Product(models.Model):
@@ -10,3 +10,7 @@ class Product(models.Model):
 
     # If want to add new field without deleting migrations and database
     featured = models.BooleanField(null=True) # Null or default = True to populate fields
+
+    def get_absolute_url(self):
+        return reverse('products:product-detail', kwargs={'id': self.id})
+        # return f'/products/{self.id}/'

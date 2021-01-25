@@ -1,0 +1,11 @@
+{% extends 'base2.html' %}
+
+{% block 1 %}
+{{ title }}
+
+{% for article in articles %}
+<p>{{ article.title }} --- {{ article.id }} </p>
+{% endfor %}
+
+{% endblock %}
+

@@ -2,5 +2,5 @@
 
 {% block content %}
 <h1>In App template: {{ object.title }}</h1>
-<p>{% if description %}{{ object.description }}{% else %}Description coming soon {% endif %}</p>
+<p>{% if object.description %}{{ object.description }}{% else %}Description coming soon {% endif %}</p>
 {% endblock %}
