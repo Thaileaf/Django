@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'products',
     'bornapp',
     'pages',
-    'Blog',
+    # 'Blog',
+    'Blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [

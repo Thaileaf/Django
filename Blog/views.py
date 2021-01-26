@@ -1,6 +1,20 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
+posts = [
+    {
+        'author': 'Thaison',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'August 27, 2018',
+    },
+    {
+        'author': 'Person2',
+        'title': 'Blog Post 2',
+        'content': 'SEcond post content',
+        'date_posted': 'August 28, 2018',
+    }
+
+]
 from .models import Article
 
 # Create your views here.
@@ -12,7 +26,12 @@ from .models import Article
     # return render(request, 'Blog/article_list.html', context)
 
 def home(request):
-    return HttpResponse('<h1>Blog Home</h1>')
+    context = {
+        'posts': posts
+    }
+    return render(request, 'Blog/home.html', context)
 
 def about(request):
-    return HttpResponse('<h1>Blog About</h1>')
+    return render(request, 'Blog/about.html', {'title': 'About',
+
+                                               })
