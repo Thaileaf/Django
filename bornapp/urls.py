@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import(
-    bad_page
-)
+# from .views import(
+#     bad_page
+# )
 
-app_name = 'bornapp'
+# app_name = 'bornapp'
 urlpatterns = [
-    path('born/', bad_page),
+#     path('born/', bad_page),
 ]
