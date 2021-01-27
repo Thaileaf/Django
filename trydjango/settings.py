@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     #own
     'products',
-    'bornapp',
     'pages',
     # 'Blog',
     'Blog.apps.BlogConfig',

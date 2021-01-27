@@ -20,7 +20,7 @@ from django.urls import include, path
 urlpatterns = [
 
     path('products/', include('products.urls')),  # include() just tags the product.urls onto the products/ app
-    path('bornapp/', include('bornapp.urls')),
+    # path('bornapp/', include('bornapp.urls')),
     path('pages/', include('pages.urls')),
     path('blog/', include('Blog.urls')),
 
