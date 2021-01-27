@@ -15,7 +15,7 @@ posts = [
     }
 
 ]
-from .models import Article
+# from .models import Article
 
 # Create your views here.
 # def list_view(request, *arg, **kwargs):
