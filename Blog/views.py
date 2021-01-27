@@ -1,21 +1,5 @@
 from django.shortcuts import render
-
-posts = [
-    {
-        'author': 'Thaison',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'August 27, 2018',
-    },
-    {
-        'author': 'Person2',
-        'title': 'Blog Post 2',
-        'content': 'SEcond post content',
-        'date_posted': 'August 28, 2018',
-    }
-
-]
-# from .models import Article
+from .models import Post
 
 # Create your views here.
 # def list_view(request, *arg, **kwargs):
@@ -27,7 +11,7 @@ posts = [
 
 def home(request):
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'Blog/home.html', context)
 
