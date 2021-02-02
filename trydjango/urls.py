@@ -18,10 +18,13 @@ from django.urls import include, path
 from django.contrib.auth import views as auth_views
 from users import views as user_views
 
+from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+
+    path('', RedirectView.as_view(pattern_name='blog-home', permanent=False)),
 
     path('products/', include('products.urls')),  # include() just tags the product.urls onto the products/ app
     # path('bornapp/', include('bornapp.urls')),
@@ -33,6 +36,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(
         template_name='users/logout.html',
                                                   ), name='logout'),
+
 
 
     path('admin/', admin.site.urls, name='blah'), # Name is getting absolute url through reverse in models
